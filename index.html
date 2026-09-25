@@ -1842,758 +1842,677 @@ transform:translateX(-100px);
     z-index:2;
 }
 
+
 </style>
-
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+<!-- FINAL RESPONSIVE PATCH — ALL DEVICES -->
 <style>
-/* =========================================================
-   RESPONSIVE — ALL DEVICES
+/* =====================================================
+   FINAL RESPONSIVE PATCH
    HP • TABLET • iPAD • LAPTOP • DESKTOP
-   ========================================================= */
+   ===================================================== */
 
-/* ---------- GENERAL ---------- */
+html, body {
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+}
 
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+*, *::before, *::after {
+    box-sizing:border-box;
 }
 
 img {
-  max-width: 100%;
+    max-width:100%;
 }
 
+/* ---------- TABLET / iPAD ---------- */
+@media (min-width:601px) and (max-width:1024px) {
 
-/* =========================================================
-   TABLET / iPAD
-   601px — 1024px
-   ========================================================= */
+    .nav {
+        height:68px;
+        padding:0 4%;
+    }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+    .nav-center {
+        display:none;
+    }
 
-  .nav {
-    padding: 0 30px;
-  }
+    .hero {
+        min-height:auto;
+        padding:120px 6% 70px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
 
-  .hero {
-    width: 100%;
-    min-height: auto;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 120px 5% 70px;
-  }
+    .hero-left {
+        width:100%;
+        max-width:720px;
+    }
 
-  .hero-left {
-    width: 100%;
-  }
+    .hero-title {
+        font-size:clamp(68px,11vw,100px);
+    }
 
-  .hero-right {
-    width: 100%;
-    height: 430px;
-  }
+    .hero-title .second,
+    .hero-title .third {
+        margin-left:0;
+    }
 
-  .hero-lily {
-    width: 380px;
-    height: 380px;
-  }
+    .hero-description {
+        margin:35px auto 0;
+    }
 
-  .feature {
-    width: 100%;
-    max-width: 1450px;
-    padding: 100px 5%;
-  }
+    .hero-right {
+        width:100%;
+        height:430px;
+        margin-top:15px;
+    }
 
-  .flower-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
+    .hero-lily {
+        width:390px;
+        height:390px;
+    }
 
-  .feature-head {
-    gap: 30px;
-  }
+    .flower-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
 
-  .garden {
-    width: 100%;
-    padding: 90px 5% 65px;
-    overflow: hidden;
-  }
+    .feature {
+        padding:100px 6%;
+    }
 
-  .garden-sub {
-    max-width: 700px !important;
-    width: 100% !important;
-    white-space: normal !important;
-  }
+    .garden {
+        padding:100px 5% 70px;
+    }
 
-  .bloom-area {
-    width: 100%;
-    padding: 0 10px;
-    gap: 10px;
-  }
+    .garden-sub {
+        width:100% !important;
+        max-width:650px !important;
+        white-space:normal !important;
+    }
 
-  .bloom {
-    width: 220px;
-    max-width: 220px;
-    height: 260px;
-  }
+    .bloom-area {
+        width:100%;
+        padding:0 10px;
+        gap:15px;
+    }
 
-  .real-flower {
-    width: 180px !important;
-    height: 180px !important;
-  }
+    .bloom {
+        width:25%;
+        max-width:none;
+    }
 
-  .book-teaser {
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+    .book-teaser {
+        padding:100px 5%;
+    }
 
-  .book-box {
-    width: 100%;
-    max-width: 1100px;
-  }
+    .book-box {
+        width:100%;
+        max-width:1000px;
+    }
 
-  #flipbook {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
+    .book-copy {
+        transform:none;
+        padding:60px 45px;
+    }
 
-  #flipbook #book-wrap {
-    width: calc(100vw - 50px) !important;
-    max-width: 950px !important;
-    height: 570px !important;
-    margin: 40px auto 0 !important;
-    overflow: hidden;
-  }
+    /* flipbook */
+    #flipbook {
+        width:100%;
+        overflow:hidden;
+    }
 
-  .final {
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+    #flipbook #book-wrap {
+        width:100% !important;
+        max-width:900px !important;
+        height:600px !important;
+        margin:40px auto 0 !important;
+        padding:35px !important;
+    }
 
+    #flipbook-book {
+        transform:translateY(17.5px) scale(.80);
+        transform-origin:center center;
+    }
 }
 
-
-/* =========================================================
-   SMALL TABLET / LARGE PHONE
-   481px — 600px
-   ========================================================= */
-
-@media (min-width: 481px) and (max-width: 600px) {
-
-  .nav {
-    height: 62px;
-    padding: 0 18px;
-  }
-
-  .nav-center {
-    display: none;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  .nav-right {
-    font-size: 8px;
-    letter-spacing: .7px;
-  }
-
-  .hero {
-    width: 100%;
-    min-height: auto;
-    padding: 105px 25px 55px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero:before {
-    inset: 78px 12px 25px;
-  }
-
-  .hero-left {
-    width: 100%;
-  }
-
-  .mini-title {
-    font-size: 8px;
-    letter-spacing: 2.5px;
-    margin-bottom: 28px;
-  }
-
-  .hero-title {
-    font-size: clamp(58px, 15vw, 78px);
-    line-height: .74;
-    letter-spacing: -4px;
-  }
-
-  .hero-title .second {
-    margin-left: 25px;
-  }
-
-  .hero-title .third {
-    margin-left: 10px;
-  }
-
-  .hero-description {
-    max-width: 300px;
-    margin-top: 38px;
-    font-size: 15px;
-  }
-
-  .hero-button {
-    margin-top: 23px;
-    padding: 12px 19px;
-  }
-
-  .hero-right {
-    width: 100%;
-    height: 330px;
-    margin-top: 15px;
-  }
-
-  .hero-lily {
-    width: 300px;
-    height: 300px;
-  }
-
-  .lily-petal {
-    width: 80px;
-    height: 165px;
-    left: 110px;
-    top: 52px;
-  }
-
-  .lily-center {
-    width: 35px;
-    height: 35px;
-    left: 132px;
-    top: 147px;
-  }
-
-  .stamen {
-    width: 4px;
-    height: 65px;
-    left: 150px;
-    top: 105px;
-  }
-
-  .floating-note {
-    display: none;
-  }
-
-  .feature {
-    width: 100%;
-    max-width: none;
-    padding: 90px 18px;
-  }
-
-  .feature-head {
-    margin-bottom: 40px;
-  }
-
-  .feature-head h2 {
-    font-size: clamp(48px, 13vw, 70px);
-    letter-spacing: -3px;
-  }
-
-  .feature-head p {
-    max-width: 300px;
-    font-size: 10px;
-    margin-top: 22px;
-  }
-
-  .flower-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-  }
-
-  .flower-image {
-    border-width: 2px;
-    padding: 4px;
-  }
-
-  .flower-info {
-    padding: 10px 2px;
-  }
-
-  .flower-info h3 {
-    font-size: 21px;
-  }
-
-  .flower-info p {
-    font-size: 8px;
-  }
-
-  .flower-overlay span {
-    width: 45px;
-    height: 45px;
-    font-size: 21px;
-  }
-
-  .flower-strip {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .garden {
-    width: 100%;
-    min-height: auto;
-    padding: 85px 12px 55px;
-    overflow: hidden;
-  }
-
-  .garden-small {
-    font-size: 8px;
-    letter-spacing: 3px;
-    margin-bottom: 22px;
-  }
-
-  .garden-small:before,
-  .garden-small:after {
-    width: 22px;
-  }
-
-  .garden-small:before {
-    margin-right: 8px;
-  }
-
-  .garden-small:after {
-    margin-left: 8px;
-  }
-
-  .garden-title {
-    width: 100%;
-    font-size: clamp(43px, 13vw, 62px) !important;
-    letter-spacing: -3px !important;
-    line-height: .8;
-  }
-
-  .garden-sub {
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 20px auto 30px !important;
-    font-size: 12px !important;
-    line-height: 1.5;
-    white-space: normal !important;
-  }
-
-  .bloom-area {
-    width: 100%;
-    min-height: 245px;
-    padding: 0;
-    gap: 0;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .bloom {
-    width: 25%;
-    max-width: none;
-    height: 225px;
-    flex: 0 0 25%;
-  }
-
-  .bloom-flower {
-    width: 100%;
-    height: 170px;
-  }
-
-  .real-flower {
-    width: 125px !important;
-    height: 125px !important;
-    max-width: none;
-  }
-
-  .tulip-real {
-    left: calc(50% - 10px) !important;
-    top: 8px !important;
-  }
-
-  .rose-real {
-    left: calc(50% + 5px) !important;
-    top: 5px !important;
-  }
-
-  .peony-real {
-    top: 8px !important;
-  }
-
-  .bloom-label {
-    margin-top: 0 !important;
-    bottom: auto !important;
-    font-size: 16px !important;
-    letter-spacing: 1px;
-    white-space: nowrap;
-  }
-
-  .bloom-label::before,
-  .bloom-label::after {
-    font-size: 9px;
-    margin-left: 4px;
-    margin-right: 4px;
-  }
-
-  .garden-quote {
-    width: 100%;
-    min-height: 80px !important;
-    margin: 15px auto 0 !important;
-    padding: 0 10px;
-  }
-
-  .quote {
-    font-size: 22px !important;
-    line-height: 1.15 !important;
-  }
-
-  .book-teaser {
-    width: 100%;
-    max-width: none;
-    padding: 85px 15px;
-    overflow: hidden;
-  }
-
-  .book-box {
-    width: 100% !important;
-    max-width: 100%;
-    min-height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .book-visual {
-    width: 100%;
-    min-height: 280px;
-    height: 280px;
-    background-size: contain;
-    background-position: center;
-  }
-
-  .book-copy {
-    width: 100%;
-    padding: 45px 28px 50px;
-    transform: none;
-    align-items: flex-start;
-  }
-
-  .book-copy h2 {
-    font-size: clamp(48px, 14vw, 70px);
-    letter-spacing: -3px;
-  }
-
-  .book-copy p {
-    max-width: 300px;
-    font-size: 15px;
-    margin-top: 24px;
-  }
-
-  .book-copy a {
-    margin-top: 30px;
-    padding: 13px 20px;
-  }
-
-  #flipbook {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  #flipbook #book-wrap {
-    width: calc(100vw - 24px) !important;
-    max-width: calc(100vw - 24px) !important;
-    height: auto !important;
-    min-height: 430px;
-    margin: 30px auto 0 !important;
-    padding: 45px 8px 20px !important;
-    overflow: hidden;
-  }
-
-  #flipbook #book {
-    width: 100% !important;
-    max-width: 100%;
-    height: auto !important;
-    margin: 0 auto;
-  }
-
-  #flipbook .page {
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  #flipbook .page img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  #flipbook .book-instruction {
-    margin-top: 20px;
-    font-size: 10px;
-  }
-
-  .final {
-    width: 100%;
-    padding: 110px 20px 80px;
-  }
-
-  .final-flower {
-    font-size: 60px;
-    margin-bottom: 22px;
-  }
-
-  .final h2 {
-    font-size: clamp(48px, 15vw, 75px);
-    letter-spacing: -4px;
-  }
-
-  .final p {
-    max-width: 300px;
-    margin: 28px auto;
-    font-size: 14px;
-  }
-
-  .footer {
-    width: 100%;
-    padding: 20px 18px;
-    text-align: center;
-    align-items: center;
-    gap: 8px;
-    font-size: 8px;
-  }
-
-  .popup {
-    padding: 15px;
-  }
-
-  .popup-box {
-    width: 100%;
-    max-width: 360px;
-    padding: 45px 25px 35px;
-  }
-
-  .popup-box .big-flower {
-    width: 90px;
-    height: 90px;
-    margin-bottom: 20px;
-  }
-
-  .popup-box h3 {
-    font-size: 35px;
-    margin-bottom: 15px;
-  }
-
-  .popup-box p {
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .close {
-    right: 16px;
-    top: 13px;
-  }
-
-  .music {
-    width: 44px;
-    height: 44px;
-    right: 15px;
-    bottom: 15px;
-  }
+/* ---------- PHONES / SMALL TABLETS ---------- */
+@media (max-width:600px) {
+
+    .nav {
+        height:60px;
+        padding:0 16px;
+    }
+
+    .logo {
+        font-size:20px;
+    }
+
+    .nav-center {
+        display:none !important;
+    }
+
+    .nav-right {
+        font-size:7px;
+        letter-spacing:.7px;
+        white-space:nowrap;
+    }
+
+    /* HERO */
+    .hero {
+        width:100%;
+        min-height:auto;
+        padding:100px 18px 55px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .hero:before {
+        inset:76px 10px 25px;
+    }
+
+    .hero-left {
+        width:100%;
+        max-width:390px;
+    }
+
+    .mini-title {
+        font-size:8px;
+        letter-spacing:2px;
+        margin-bottom:28px;
+    }
+
+    .hero-title {
+        width:100%;
+        font-size:clamp(53px,16.5vw,68px) !important;
+        line-height:.78;
+        letter-spacing:-3.5px;
+        word-break:normal;
+    }
+
+    .hero-title .second,
+    .hero-title .third {
+        margin-left:0 !important;
+    }
+
+    .hero-description {
+        width:100%;
+        max-width:290px;
+        margin:32px auto 0;
+        font-size:14px;
+        line-height:1.55;
+    }
+
+    .hero-button {
+        margin-top:22px;
+        padding:12px 18px;
+    }
+
+    .hero-right {
+        width:100%;
+        height:285px;
+        margin-top:10px;
+    }
+
+    .hero-lily {
+        width:270px;
+        height:270px;
+    }
+
+    .lily-petal {
+        width:72px;
+        height:148px;
+        left:99px;
+        top:48px;
+    }
+
+    .lily-center {
+        width:32px;
+        height:32px;
+        left:119px;
+        top:132px;
+    }
+
+    .stamen {
+        width:4px;
+        height:58px;
+        left:135px;
+        top:95px;
+    }
+
+    .floating-note {
+        display:none !important;
+    }
+
+    /* FLOWER CARDS */
+    .feature {
+        width:100%;
+        max-width:none;
+        padding:75px 15px;
+    }
+
+    .feature-head {
+        display:block;
+        margin-bottom:35px;
+    }
+
+    .feature-head h2 {
+        font-size:clamp(45px,14vw,65px);
+        letter-spacing:-3px;
+    }
+
+    .feature-head p {
+        max-width:280px;
+        margin:20px auto 0;
+        font-size:10px;
+        line-height:1.6;
+    }
+
+    .flower-grid {
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px;
+    }
+
+    .flower-image {
+        width:100%;
+    }
+
+    .flower-info h3 {
+        font-size:19px;
+    }
+
+    .flower-info p {
+        font-size:8px;
+    }
+
+    /* MOVING STRIP */
+    .flower-strip {
+        width:100%;
+        overflow:hidden;
+    }
+
+    .flower-group span {
+        font-size:16px;
+        margin-right:50px;
+    }
+
+    /* GARDEN */
+    .garden {
+        width:100%;
+        min-height:auto;
+        padding:80px 12px 55px;
+        overflow:hidden;
+    }
+
+    .garden-small {
+        font-size:7px;
+        letter-spacing:2.5px;
+        margin-bottom:22px;
+        white-space:nowrap;
+    }
+
+    .garden-small:before,
+    .garden-small:after {
+        width:20px;
+    }
+
+    .garden-small:before { margin-right:7px; }
+    .garden-small:after { margin-left:7px; }
+
+    .garden-title {
+        width:100%;
+        font-size:clamp(43px,13.5vw,60px) !important;
+        line-height:.82;
+        letter-spacing:-3px !important;
+    }
+
+    .garden-sub {
+        width:100% !important;
+        max-width:300px !important;
+        margin:20px auto 35px !important;
+        font-size:12px !important;
+        line-height:1.5;
+        white-space:normal !important;
+    }
+
+    /* 2 × 2 FLOWER LAYOUT ON PHONE */
+    .bloom-area {
+        width:100%;
+        min-height:auto;
+        padding:0;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:8px 4px;
+        align-items:start;
+        justify-items:center;
+    }
+
+    .bloom {
+        width:100%;
+        max-width:155px;
+        height:175px;
+        top:0;
+        transform:none !important;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:flex-start;
+    }
+
+    .bloom:hover,
+    .bloom.active {
+        transform:translateY(-5px) !important;
+    }
+
+    .bloom-flower {
+        width:100%;
+        height:125px;
+        display:flex;
+        align-items:flex-start;
+        justify-content:center;
+        transform:none !important;
+    }
+
+    .real-flower {
+        width:115px !important;
+        height:115px !important;
+        left:50% !important;
+        top:0 !important;
+        transform:translateX(-50%) !important;
+    }
+
+    .tulip-real,
+    .rose-real,
+    .peony-real {
+        left:50% !important;
+        top:0 !important;
+    }
+
+    .bloom-label,
+    .bloom:nth-child(3) .bloom-label,
+    .bloom:nth-child(4) .bloom-label {
+        position:relative !important;
+        bottom:auto !important;
+        margin:0 !important;
+        transform:none !important;
+        font-size:17px !important;
+        line-height:1;
+        white-space:nowrap;
+    }
+
+    .bloom-label::before,
+    .bloom-label::after {
+        font-size:8px;
+        margin-left:3px;
+        margin-right:3px;
+    }
+
+    .garden-quote {
+        width:100%;
+        min-height:70px !important;
+        margin:18px auto 0 !important;
+        padding:0 8px;
+    }
+
+    .quote {
+        font-size:20px !important;
+        line-height:1.15 !important;
+    }
+
+    /* BOOK TEASER */
+    .book-teaser {
+        width:100%;
+        max-width:none;
+        padding:75px 12px;
+        overflow:hidden;
+    }
+
+    .book-box {
+        width:100% !important;
+        max-width:none !important;
+        min-height:0;
+        display:flex;
+        flex-direction:column;
+    }
+
+    .book-visual {
+        width:100%;
+        height:260px;
+        min-height:260px;
+        background-size:contain;
+        background-position:center;
+    }
+
+    .book-copy {
+        width:100%;
+        padding:42px 25px 45px;
+        transform:none !important;
+        align-items:flex-start;
+    }
+
+    .book-copy h2 {
+        font-size:clamp(45px,14vw,65px);
+        letter-spacing:-3px;
+    }
+
+    .book-copy p {
+        max-width:280px;
+        margin-top:22px;
+        font-size:14px;
+    }
+
+    .book-copy a {
+        margin-top:28px;
+        padding:12px 18px;
+    }
+
+    /* FLIPBOOK */
+    #flipbook {
+        width:100%;
+        max-width:100%;
+        overflow:hidden;
+        padding:75px 10px !important;
+    }
+
+    #flipbook > h2 {
+        font-size:clamp(52px,16vw,72px) !important;
+        line-height:.82 !important;
+        letter-spacing:-3px !important;
+        margin-bottom:30px !important;
+    }
+
+    #flipbook #book-wrap {
+        width:100% !important;
+        max-width:100% !important;
+        height:330px !important;
+        min-height:0 !important;
+        margin:25px auto 0 !important;
+        padding:30px 5px 15px !important;
+        overflow:hidden !important;
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+    }
+
+    #flipbook #book-wrap::before {
+        top:12px;
+        font-size:6px;
+        letter-spacing:.15em;
+        white-space:nowrap;
+    }
+
+    #flipbook-book {
+        width:730px !important;
+        height:520px !important;
+        transform:translateY(8px) scale(.43) !important;
+        transform-origin:center center !important;
+        flex:0 0 730px;
+    }
+
+    #flipbook .book-instruction {
+        margin-top:18px;
+        font-size:8px !important;
+    }
+
+    /* FINAL */
+    .final {
+        width:100%;
+        padding:90px 18px 70px;
+    }
+
+    .final-flower {
+        font-size:55px;
+        margin-bottom:20px;
+    }
+
+    .final h2 {
+        font-size:clamp(48px,15vw,70px);
+        letter-spacing:-4px;
+    }
+
+    .final p {
+        max-width:280px;
+        margin:28px auto;
+        font-size:13px;
+    }
+
+    .footer {
+        width:100%;
+        padding:20px 15px;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:8px;
+        font-size:7px;
+    }
+
+    /* POPUP */
+    .popup {
+        padding:12px;
+    }
+
+    .popup-box {
+        width:100%;
+        max-width:350px;
+        padding:42px 22px 32px;
+    }
+
+    .popup-box h3 {
+        font-size:34px;
+    }
+
+    .popup-box p {
+        font-size:14px;
+    }
+
+    .music {
+        width:42px;
+        height:42px;
+        right:13px;
+        bottom:13px;
+    }
 }
 
+/* ---------- VERY SMALL PHONES ---------- */
+@media (max-width:380px) {
 
-/* =========================================================
-   MOBILE
-   381px — 480px
-   ========================================================= */
+    .hero-title {
+        font-size:52px !important;
+    }
 
-@media (min-width: 381px) and (max-width: 480px) {
+    .hero-right {
+        height:260px;
+    }
 
-  .nav-center {
-    display: none;
-  }
+    .hero-lily {
+        width:245px;
+        height:245px;
+    }
 
-  .hero {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+    .lily-petal {
+        width:65px;
+        height:135px;
+        left:90px;
+        top:44px;
+    }
 
-  .hero-right {
-    height: 310px;
-  }
+    .lily-center {
+        width:29px;
+        height:29px;
+        left:108px;
+        top:120px;
+    }
 
-  .hero-lily {
-    width: 285px;
-    height: 285px;
-  }
+    .stamen {
+        left:122px;
+        top:86px;
+        height:52px;
+    }
 
-  .flower-grid {
-    gap: 12px;
-  }
+    .flower-grid {
+        gap:9px;
+    }
 
-  .garden {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+    .garden-title {
+        font-size:40px !important;
+    }
 
-  .garden-title {
-    font-size: 61px !important;
-  }
+    .real-flower {
+        width:100px !important;
+        height:100px !important;
+    }
 
-  .real-flower {
-    width: 115px !important;
-    height: 115px !important;
-  }
+    .bloom {
+        height:160px;
+    }
 
-  .bloom {
-    height: 215px;
-  }
+    .bloom-flower {
+        height:112px;
+    }
 
-  .bloom-flower {
-    height: 160px;
-  }
+    .bloom-label {
+        font-size:15px !important;
+    }
 
-  .book-visual {
-    min-height: 260px;
-    height: 260px;
-  }
+    .book-visual {
+        height:230px;
+        min-height:230px;
+    }
+
+    #flipbook #book-wrap {
+        height:295px !important;
+    }
+
+    #flipbook-book {
+        transform:translateY(5px) scale(.39) !important;
+    }
 }
 
+/* ---------- SMALL LAPTOPS ---------- */
+@media (min-width:1025px) and (max-width:1200px) {
 
-/* =========================================================
-   SMALL PHONE
-   380px AND BELOW
-   ========================================================= */
+    .hero {
+        padding-left:4%;
+        padding-right:4%;
+    }
 
-@media (max-width: 380px) {
+    .hero-lily {
+        width:500px;
+        height:500px;
+    }
 
-  .nav {
-    height: 58px;
-    padding: 0 15px;
-  }
-
-  .nav-center {
-    display: none;
-  }
-
-  .logo {
-    font-size: 18px;
-  }
-
-  .nav-right {
-    font-size: 7px;
-  }
-
-  .hero {
-    padding: 95px 15px 50px;
-  }
-
-  .hero-title {
-    font-size: 55px;
-    letter-spacing: -3px;
-  }
-
-  .hero-title .second {
-    margin-left: 18px;
-  }
-
-  .hero-right {
-    height: 290px;
-  }
-
-  .hero-lily {
-    width: 270px;
-    height: 270px;
-  }
-
-  .feature {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .flower-grid {
-    gap: 9px;
-  }
-
-  .flower-info h3 {
-    font-size: 19px;
-  }
-
-  .garden-title {
-    font-size: 39px !important;
-  }
-
-  .real-flower {
-    width: 105px !important;
-    height: 105px !important;
-  }
-
-  .bloom {
-    height: 205px;
-  }
-
-  .bloom-flower {
-    height: 150px;
-  }
-
-  .bloom-label {
-    font-size: 14px !important;
-  }
-
-  .book-visual {
-    min-height: 240px;
-    height: 240px;
-  }
-
-  .book-copy {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .book-copy h2 {
-    font-size: 45px;
-  }
-
-  .final {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-
-/* =========================================================
-   VERY LARGE DESKTOP
-   1441px+
-   ========================================================= */
-
-@media (min-width: 1441px) {
-
-  .hero {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .feature {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .garden {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .book-teaser {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
+    .book-box {
+        width:100%;
+        max-width:1100px;
+    }
 }
 </style>
-
-<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
 </head>
 
 
