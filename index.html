@@ -1842,8 +1842,757 @@ transform:translateX(-100px);
     z-index:2;
 }
 
-
 </style>
+
+<style>
+/* =========================================================
+   RESPONSIVE — ALL DEVICES
+   HP • TABLET • iPAD • LAPTOP • DESKTOP
+   ========================================================= */
+
+/* ---------- GENERAL ---------- */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   TABLET / iPAD
+   601px — 1024px
+   ========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .nav {
+    padding: 0 30px;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 120px 5% 70px;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-right {
+    width: 100%;
+    height: 430px;
+  }
+
+  .hero-lily {
+    width: 380px;
+    height: 380px;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 1450px;
+    padding: 100px 5%;
+  }
+
+  .flower-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .feature-head {
+    gap: 30px;
+  }
+
+  .garden {
+    width: 100%;
+    padding: 90px 5% 65px;
+    overflow: hidden;
+  }
+
+  .garden-sub {
+    max-width: 700px !important;
+    width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .bloom-area {
+    width: 100%;
+    padding: 0 10px;
+    gap: 10px;
+  }
+
+  .bloom {
+    width: 220px;
+    max-width: 220px;
+    height: 260px;
+  }
+
+  .real-flower {
+    width: 180px !important;
+    height: 180px !important;
+  }
+
+  .book-teaser {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .book-box {
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  #flipbook {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #flipbook #book-wrap {
+    width: calc(100vw - 50px) !important;
+    max-width: 950px !important;
+    height: 570px !important;
+    margin: 40px auto 0 !important;
+    overflow: hidden;
+  }
+
+  .final {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET / LARGE PHONE
+   481px — 600px
+   ========================================================= */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+  .nav {
+    height: 62px;
+    padding: 0 18px;
+  }
+
+  .nav-center {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-right {
+    font-size: 8px;
+    letter-spacing: .7px;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: auto;
+    padding: 105px 25px 55px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero:before {
+    inset: 78px 12px 25px;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .mini-title {
+    font-size: 8px;
+    letter-spacing: 2.5px;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    font-size: clamp(58px, 15vw, 78px);
+    line-height: .74;
+    letter-spacing: -4px;
+  }
+
+  .hero-title .second {
+    margin-left: 25px;
+  }
+
+  .hero-title .third {
+    margin-left: 10px;
+  }
+
+  .hero-description {
+    max-width: 300px;
+    margin-top: 38px;
+    font-size: 15px;
+  }
+
+  .hero-button {
+    margin-top: 23px;
+    padding: 12px 19px;
+  }
+
+  .hero-right {
+    width: 100%;
+    height: 330px;
+    margin-top: 15px;
+  }
+
+  .hero-lily {
+    width: 300px;
+    height: 300px;
+  }
+
+  .lily-petal {
+    width: 80px;
+    height: 165px;
+    left: 110px;
+    top: 52px;
+  }
+
+  .lily-center {
+    width: 35px;
+    height: 35px;
+    left: 132px;
+    top: 147px;
+  }
+
+  .stamen {
+    width: 4px;
+    height: 65px;
+    left: 150px;
+    top: 105px;
+  }
+
+  .floating-note {
+    display: none;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: none;
+    padding: 90px 18px;
+  }
+
+  .feature-head {
+    margin-bottom: 40px;
+  }
+
+  .feature-head h2 {
+    font-size: clamp(48px, 13vw, 70px);
+    letter-spacing: -3px;
+  }
+
+  .feature-head p {
+    max-width: 300px;
+    font-size: 10px;
+    margin-top: 22px;
+  }
+
+  .flower-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .flower-image {
+    border-width: 2px;
+    padding: 4px;
+  }
+
+  .flower-info {
+    padding: 10px 2px;
+  }
+
+  .flower-info h3 {
+    font-size: 21px;
+  }
+
+  .flower-info p {
+    font-size: 8px;
+  }
+
+  .flower-overlay span {
+    width: 45px;
+    height: 45px;
+    font-size: 21px;
+  }
+
+  .flower-strip {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .garden {
+    width: 100%;
+    min-height: auto;
+    padding: 85px 12px 55px;
+    overflow: hidden;
+  }
+
+  .garden-small {
+    font-size: 8px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+  }
+
+  .garden-small:before,
+  .garden-small:after {
+    width: 22px;
+  }
+
+  .garden-small:before {
+    margin-right: 8px;
+  }
+
+  .garden-small:after {
+    margin-left: 8px;
+  }
+
+  .garden-title {
+    width: 100%;
+    font-size: clamp(43px, 13vw, 62px) !important;
+    letter-spacing: -3px !important;
+    line-height: .8;
+  }
+
+  .garden-sub {
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 20px auto 30px !important;
+    font-size: 12px !important;
+    line-height: 1.5;
+    white-space: normal !important;
+  }
+
+  .bloom-area {
+    width: 100%;
+    min-height: 245px;
+    padding: 0;
+    gap: 0;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .bloom {
+    width: 25%;
+    max-width: none;
+    height: 225px;
+    flex: 0 0 25%;
+  }
+
+  .bloom-flower {
+    width: 100%;
+    height: 170px;
+  }
+
+  .real-flower {
+    width: 125px !important;
+    height: 125px !important;
+    max-width: none;
+  }
+
+  .tulip-real {
+    left: calc(50% - 10px) !important;
+    top: 8px !important;
+  }
+
+  .rose-real {
+    left: calc(50% + 5px) !important;
+    top: 5px !important;
+  }
+
+  .peony-real {
+    top: 8px !important;
+  }
+
+  .bloom-label {
+    margin-top: 0 !important;
+    bottom: auto !important;
+    font-size: 16px !important;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .bloom-label::before,
+  .bloom-label::after {
+    font-size: 9px;
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  .garden-quote {
+    width: 100%;
+    min-height: 80px !important;
+    margin: 15px auto 0 !important;
+    padding: 0 10px;
+  }
+
+  .quote {
+    font-size: 22px !important;
+    line-height: 1.15 !important;
+  }
+
+  .book-teaser {
+    width: 100%;
+    max-width: none;
+    padding: 85px 15px;
+    overflow: hidden;
+  }
+
+  .book-box {
+    width: 100% !important;
+    max-width: 100%;
+    min-height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .book-visual {
+    width: 100%;
+    min-height: 280px;
+    height: 280px;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .book-copy {
+    width: 100%;
+    padding: 45px 28px 50px;
+    transform: none;
+    align-items: flex-start;
+  }
+
+  .book-copy h2 {
+    font-size: clamp(48px, 14vw, 70px);
+    letter-spacing: -3px;
+  }
+
+  .book-copy p {
+    max-width: 300px;
+    font-size: 15px;
+    margin-top: 24px;
+  }
+
+  .book-copy a {
+    margin-top: 30px;
+    padding: 13px 20px;
+  }
+
+  #flipbook {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #flipbook #book-wrap {
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    height: auto !important;
+    min-height: 430px;
+    margin: 30px auto 0 !important;
+    padding: 45px 8px 20px !important;
+    overflow: hidden;
+  }
+
+  #flipbook #book {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+  }
+
+  #flipbook .page {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #flipbook .page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #flipbook .book-instruction {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+
+  .final {
+    width: 100%;
+    padding: 110px 20px 80px;
+  }
+
+  .final-flower {
+    font-size: 60px;
+    margin-bottom: 22px;
+  }
+
+  .final h2 {
+    font-size: clamp(48px, 15vw, 75px);
+    letter-spacing: -4px;
+  }
+
+  .final p {
+    max-width: 300px;
+    margin: 28px auto;
+    font-size: 14px;
+  }
+
+  .footer {
+    width: 100%;
+    padding: 20px 18px;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 8px;
+  }
+
+  .popup {
+    padding: 15px;
+  }
+
+  .popup-box {
+    width: 100%;
+    max-width: 360px;
+    padding: 45px 25px 35px;
+  }
+
+  .popup-box .big-flower {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+  }
+
+  .popup-box h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  .popup-box p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .close {
+    right: 16px;
+    top: 13px;
+  }
+
+  .music {
+    width: 44px;
+    height: 44px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   381px — 480px
+   ========================================================= */
+
+@media (min-width: 381px) and (max-width: 480px) {
+
+  .nav-center {
+    display: none;
+  }
+
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero-right {
+    height: 310px;
+  }
+
+  .hero-lily {
+    width: 285px;
+    height: 285px;
+  }
+
+  .flower-grid {
+    gap: 12px;
+  }
+
+  .garden {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .garden-title {
+    font-size: 61px !important;
+  }
+
+  .real-flower {
+    width: 115px !important;
+    height: 115px !important;
+  }
+
+  .bloom {
+    height: 215px;
+  }
+
+  .bloom-flower {
+    height: 160px;
+  }
+
+  .book-visual {
+    min-height: 260px;
+    height: 260px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   380px AND BELOW
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .nav {
+    height: 58px;
+    padding: 0 15px;
+  }
+
+  .nav-center {
+    display: none;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-right {
+    font-size: 7px;
+  }
+
+  .hero {
+    padding: 95px 15px 50px;
+  }
+
+  .hero-title {
+    font-size: 55px;
+    letter-spacing: -3px;
+  }
+
+  .hero-title .second {
+    margin-left: 18px;
+  }
+
+  .hero-right {
+    height: 290px;
+  }
+
+  .hero-lily {
+    width: 270px;
+    height: 270px;
+  }
+
+  .feature {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .flower-grid {
+    gap: 9px;
+  }
+
+  .flower-info h3 {
+    font-size: 19px;
+  }
+
+  .garden-title {
+    font-size: 39px !important;
+  }
+
+  .real-flower {
+    width: 105px !important;
+    height: 105px !important;
+  }
+
+  .bloom {
+    height: 205px;
+  }
+
+  .bloom-flower {
+    height: 150px;
+  }
+
+  .bloom-label {
+    font-size: 14px !important;
+  }
+
+  .book-visual {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .book-copy {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .book-copy h2 {
+    font-size: 45px;
+  }
+
+  .final {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+/* =========================================================
+   VERY LARGE DESKTOP
+   1441px+
+   ========================================================= */
+
+@media (min-width: 1441px) {
+
+  .hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .garden {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .book-teaser {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
 </head>
 
